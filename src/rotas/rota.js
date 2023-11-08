@@ -21,6 +21,9 @@ const buscarTransacao = require("../intermediarios/buscarTransacao");
 const rota = express.Router();
 rota.use(express.json());
 
+rota.get('/', async (req,res)=>{
+  return res.status(200).json('Deploy ok!')
+})
 rota.post("/usuario", controladorCriarUsuario.handle);
 rota.post("/login", validarUsuario);
 
